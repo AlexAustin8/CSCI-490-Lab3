@@ -7,6 +7,9 @@ import android.widget.ListView;
 import android.widget.Toast;
 import android.widget.ArrayAdapter;
 import android.widget.AdapterView;
+
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
     private ListView classSchedule;
     private ArrayAdapter classAdapter;
@@ -43,5 +46,10 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+    }
+
+    public ArrayList<Course> populateData(){
+        ArrayList<Course> courses = new ArrayList<>;
+        
     }
 }
