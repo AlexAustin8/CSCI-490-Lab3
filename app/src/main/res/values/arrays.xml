@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="classes">
+        <item
+            >Data Structures and Algorithms</item>
+        <item
+            >Software Engineering</item>
+        <item
+            >Database Concepts</item>
+        <item
+            >Discrete Structures II</item>
+        <item
+            >Sofware Architecture</item>
+    </string-array>
+
+
+
+</resources>
