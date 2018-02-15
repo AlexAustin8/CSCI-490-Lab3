@@ -19,12 +19,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        classSchedule = this.findViewById(R.id.class_schedule);
+        //classSchedule = this.findViewById(R.id.class_schedule);
 
-        String[] classes = getResources().getStringArray(R.array.classes);
+        //String[] classes = getResources().getStringArray(R.array.classes);
 
-        classAdapter =  new ArrayAdapter(this.getApplicationContext(), android.R.layout.simple_list_item_1, classes);
-        classSchedule.setAdapter(classAdapter);
+        //classAdapter =  new ArrayAdapter(this.getApplicationContext(), android.R.layout.simple_list_item_1, classes);
+        //classSchedule.setAdapter(classAdapter);
+       classSchedule = findViewById(R.id.class_schedule);
+
+        ArrayList<Course> courses = populateData();
+
+        CourseAdapter adapter = new CourseAdapter(this, courses);
+        classSchedule.setAdapter(adapter);
+
 
         classSchedule.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -49,7 +56,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public ArrayList<Course> populateData(){
-        ArrayList<Course> courses = new ArrayList<>;
-        
+        ArrayList<Course> courses = new ArrayList<>();
+
+        Course c = new Course();
+        c.setCourseName("Programming I");
+        c.setCourseNumber("CSCI 220");
+        c.setCourseProfessor("Dr. Leclerc");
+        courses.add(c);
+        Course c2 = new Course();
+        c2.setCourseName("Programming II");
+        c2.setCourseNumber("CSCI 221");
+        c2.setCourseProfessor("Dr. Buhler");
+        courses.add(c2);
+
+        return courses;
     }
 }
